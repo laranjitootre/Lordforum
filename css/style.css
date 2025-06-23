@@ -1,0 +1,260 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container do Login/Registro */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #00aaff;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00aaff;
+}
+
+.btn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #0088cc;
+}
+
+/* Links */
+a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de erro/sucesso */
+.error {
+    color: #ff5555;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #55ff55;
+    margin-bottom: 10px;
+}
+
+/* Estilo do Fórum */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    min-height: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card p {
+    color: #cccccc;
+    flex-grow: 1;
+}
+
+.card hr {
+    border: 0;
+    border-top: 1px solid #333333;
+    margin: 10px 0;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    resize: vertical;
+}
+
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00aaff;
+}
+
+/* Perfil Dropdown */
+.profile-menu {
+    position: relative;
+}
+
+.profile-btn {
+    width: auto;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.profile-dropdown img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-dropdown p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #ff5555;
+}
+
+.logout-btn:hover {
+    background-color: #cc4444;
+}
+
+.admin-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #00cc00;
+    margin-top: 10px;
+}
+
+.admin-btn:hover {
+    background-color: #00aa00;
+}
+
+/* Botão Deletar */
+.delete-btn {
+    width: auto;
+    padding: 8px 16px;
+    background-color: #ff5555;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #cc4444;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 20px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-btn {
+        width: 100%;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card img {
+        margin-bottom: 10px;
+    }
+}
